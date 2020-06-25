@@ -1,47 +1,30 @@
-$(document).ready(function() {
-  // banner slider
-
-  $('.dd_slider').slick({
-      dots: true,
-      arrows: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      speed: 300,
-      fade: true,
-      autoplay: 3000,
-      cssEase: 'linear',
-      appendDots: $(".banner__dots"),
-      prevArrow: $(".banner-prev"),
-      nextArrow: $(".banner-next"),
-      responsive: [
-        {
-          breakpoint: 2500,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            arrows: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 991,
-          settings: {
-            arrows: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            arrows: false,
-            dots: true
-          }
-        }
-      ]
-    }); 
-
-
-
-});
+$(document).ready(function(){
+  
+   $(".viewOffers").on("click", function (event) {
+  
+       //отменяем стандартную обработку нажатия по ссылке
+  
+       event.preventDefault();
+  
+  
+  
+       //забираем идентификатор бока с атрибута href
+  
+       var id  = $(this).attr('href'),
+  
+  
+  
+       //узнаем высоту от начала страницы до блока на который ссылается якорь
+  
+           top = $(id).offset().top;
+  
+        
+  
+       //анимируем переход на расстояние - top за 1500 мс
+  
+       $('body,html').animate({scrollTop: top}, 500);
+  
+   });
+  
+  });
+  
