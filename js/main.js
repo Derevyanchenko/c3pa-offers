@@ -25,6 +25,49 @@ $(document).ready(function(){
        $('body,html').animate({scrollTop: top}, 500);
   
    });
+
+
+   $('.blogOffers__slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 300,
+    // fade: true,
+    // autoplay: 3000,
+    // cssEase: 'linear',
+    prevArrow: $(".blogOffers__slider-prev"),
+    nextArrow: $(".blogOffers__slider-next"),
+    responsive: [
+      {
+        breakpoint: 2500,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          arrows: true,
+          dots: false
+        }
+      }
+    ]
+  }); 
   
   });
   

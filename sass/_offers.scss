@@ -81,9 +81,12 @@
  @media (min-width: 767px) {
  
      .ddOffers__list .col-lg-4 {
-         -ms-flex: 0 0 50%;
-             flex: 0 0 50%;
-         max-width: 50%;
+        //  -ms-flex: 0 0 50%;
+        //      flex: 0 0 50%;
+        //  max-width: 50%;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+    max-width: 33.333333%;
        }
      
   
@@ -106,37 +109,38 @@
 }
 
 .dd_offers_banner {
-    padding: 575px 0 112px;
-    height: 1177px;
+    padding: 418px 0 142px;
+    height: 897px;
     text-align: center;
     background-position: center !important;
     position: relative;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     z-index: 2;
     h1 {
         transform: rotate(-0.5deg);
-        max-width: 700px;
-        text-align: right;
+        max-width: 600px;
+        text-align: center;
         color: #ffffff;
-        font-size: 38px;
-        font-weight: 500;
-        line-height: 64.97px;
-        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 48.32px;
         letter-spacing: 1.52px;
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         margin-left: auto;
+        margin-right: 110px;
         position: relative;
         // background: url(../img/title_bg.png) no-repeat;
         .text_shadow {
             opacity: 0.15;
             color: #ffffff;
-            font-size: 38px;
-            font-weight: 100;
-            line-height: 65.15px;
-            letter-spacing: 1.52px;
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 48.44px;
             position: absolute;
-            right: 4px;
-            top: -11px;
+            left: 15px;
+            top: -7px;
         }
     }
     p {
@@ -144,18 +148,20 @@
         color: #ffffff;
         font-size: 30px;
         font-weight: 300;
-        line-height: 42.79px;
+        line-height: 48.86px;
         letter-spacing: 1.52px;
-        margin: 0;
-        margin-bottom: 53px;
+        max-width: 842px;
+        margin: 0 auto;
+        margin-bottom: 33px;
         text-align: center;
     }
     p.banner__subtitle {
-        margin: 0;
+        margin: 0 auto;
+        text-shadow: 5px 0 4px rgba(0, 0, 0, 0.07);
         color: #ffffff;
         font-size: 30px;
         font-weight: 500;
-        line-height: 65.79px;
+        line-height: 48.86px;
         letter-spacing: 1.52px;
 
     }
@@ -186,29 +192,58 @@
     line-height: 51.04px;
     text-decoration: underline;
     letter-spacing: 1.2px;
+    margin-bottom: 48px;
 }
 
-.ddOffers__list {
-    margin-top: 50px;
-}
 
 .ddOffers__item {
     display: block;
-    cursor: pointer;
-    border-radius: 5px;
+    color: #fff;
+    // cursor: pointer;
     text-decoration: none !important;
-    background-color: #fff;
-    padding: 25px 15px;
-    box-shadow: 19px 3px 39px -3px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    padding: 0;
     transition: all 0.3s;
-    &:hover {
-        transform: scale(1.05);
-        transition: all 0.3s;
+    margin-bottom: 0;
+    // &:hover {
+    //     transform: scale(1.05);
+    //     transition: all 0.3s;
+    // }
+
+}
+
+.ddOffers__item-content {
+    padding: 0 40px;
+}
+
+.ddOffers__list .col-lg-4 {
+    &:first-child {
+        .ddOffers__item-content {
+            border-right: 2px solid #d56b5f;
+        }
+    }
+    &:last-child {
+        .ddOffers__item-content {
+            border-left: 2px solid #d56b5f;
+        }
     }
 }
 
 h3.offer_title {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+    margin-top: 12px;
+    &:after {
+        margin: auto;
+        margin-top: 3px;
+        content: "";
+        display: block;
+        width: 127px;
+        height: 3px;
+        background-image: linear-gradient(-130deg, #cf3d43 50%, #fffdfd 56%, white 100%);
+    }
 }
 
 
@@ -222,6 +257,8 @@ h3.offer_title {
 }
 
 .category_row {
+    margin-top: 15px;
+    margin-bottom: 45px;
     text-align: center;
 }
 
@@ -297,83 +334,206 @@ h3.offer_title {
 
 .img_wrap {
     height: 50px;
+    text-align: center;
 }
 
-.ddOffers__item {
-    padding: 20px 10px;
-    border-radius: 5px;
-    box-shadow: 0 10px 40px 0 rgba(140,130,154,.1);
-    background-color: #fff;
-    padding: 25px 30px 27px 10px;
-    border: 1px solid rgba(255,156,0,.001);
-}
-
-.ddOffers__item {
-    color: #fff;
-    border-radius: 0;
-    -webkit-box-shadow: 0 10px 40px 0 rgba(140, 130, 154, 0.1);
-    box-shadow: 0 10px 40px 0 rgba(140, 130, 154, 0.1);
-    background-color: #35363b;
-    padding: 20px 15px;
-    height: 100%;
-    // margin-bottom: 30px;
-    // border: 1px solid rgba(255, 156, 0, 0.001);
-    // border: 2px solid #ee534f;
-    border-bottom: 2px solid #ee534f;
-}
 
 .offer_info {
     margin-bottom: 15px;
-    border-bottom: 1px solid #ef3e42;
+
 }
 
 .offer_data {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .dd_item {
     display: flex;
-    width: 50%;
-    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 10px;
 }
 
 span.dd_item__title {
-    font-size: 13px;
+    font-size: 16px;
     color: #fff;
     display: block;
     white-space: nowrap;
-    margin-bottom: 5px;
 }
 
 span.dd_item__count {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 5px;
+    opacity: 0.7;
 }
 
 .ddOffers__list .col-lg-4 {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+}
+
+.btn-center {
+    text-align: center;
+}
+
+.show_singleOffer {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 35px;
+    border: none;
+    border-radius: 3px;
+    padding: 12px 35px;
+    position: relative;
+    letter-spacing: .05px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    -webkit-transition: .16s ease-out;
+    transition: .16s ease-out;
+    background-color: #d05450;
+    text-transform: uppercase;
+    &:before {
+        right: 10px;
+        width: 6px;
+        margin-top: -3px;
+        margin-left: -5px;
+        height: 6px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        content: "";
+        position: absolute;
+        -webkit-transition: .16s ease-out;
+        transition: .16s ease-out;
+        top: 50%;
+    }
+    &:after {
+        right: 11px;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        -webkit-transition: .16s ease-out;
+        transition: .16s ease-out;
+        content: "";
+        position: absolute;
+        top: 50%;
+    }
+    &:hover {
+        -webkit-transition: .16s ease-out;
+        transition: .16s ease-out;
+        padding-right: 45px;
+        &:before {
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+        }
+        &:after {
+            width: 15px;
+        }
+    }
 }
 
 // media
 
 @media (max-width: 991px) {
 
-    .dd_offers_banner h1,
-    .offers_area-title {
-        font-size: 54px;
+    // .dd_offers_banner h1,
+    // .offers_area-title {
+    //     font-size: 54px;
+    // }
+
+    * {
+        br {
+            display: none;
+        }
     }
+
+    .category_row-sort {
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+    .dd_offers_banner h1 {
+        margin-right: 0;
+    }
+
+    .dd_offers_banner {
+        padding: 150px 0 80px;
+        height: auto;
+        background-position: 70% 69% !important;
+        background-size: initial !important;
+    }
+
+    .dd_offers_banner h1 {
+        font-size: 36px;
+        line-height: 48.32px;
+        .text_shadow {
+            left: -9px;
+            top: -6px;
+        }
+    }
+
+    .dd_offers_banner p {
+        font-size: 20px;
+    line-height: 30.86px;
+        margin-bottom: 25px;
+    }
+
+    .dd_offers_banner p.banner__subtitle {
+        font-size: 20px;
+        line-height: 30.86px;
+    }
+
+    .ddOffers__item-content {
+        padding: 0 16px;
+    }
+
+    span.dd_item__count {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    span.dd_item__title {
+        font-size: 14px;
+    }
+
+    .category_btn {
+        padding: 9px 22px;
+        margin: 0 5px;
+        font-size: 16px;
+    }
+
+    .category_btn:hover {
+        padding-right: 40px;
+    }
+
 
 }
 
 @media (max-width: 768px) {
 
-    .dd_offers_banner h1,
-    .offers_area-title {
-        font-size: 42px;
-        margin-bottom: 35px;
+    .dd_offers_banner {
+        background-position: 59% 59% !important;
     }
+
+    .dd_offers_banner h1 {
+        font-size: 30px;
+        line-height: 44px;
+        margin-bottom: 20px;
+    }
+
+    .dd_offers_banner h1 .text_shadow {
+        font-size: 30px;
+        line-height: 44px;
+    }
+
     .dd_offers_banner p {
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    .dd_offers_banner p.banner__subtitle {
         line-height: 28px;
         font-size: 18px;
     }
@@ -381,18 +541,51 @@ span.dd_item__count {
     .category_row {
         display: flex;
         margin: auto;
-        flex-direction: column;
-        max-width: 300px;
+        max-width: 350px;
         align-items: center;
         justify-content: center;
         width: 100%;
+        margin-bottom: 45px;
+        flex-wrap: wrap;
     }
 
     .category_btn {
-        font-size: 16px;
-        width: 100%;
+        font-size: 14px;
+        width: calc(50% - 10px);
+        /* margin: 0; */
         margin-bottom: 15px;
         margin-top: 0px;
+        padding: 9px 9px;
+    }
+
+    .category_btn:hover {
+        padding-right: 20px;
+    }
+
+    .category_row-sort {
+        margin-bottom: 10px;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    
+
+    .ddOffers__list .col-lg-4:first-child .ddOffers__item-content,
+    .ddOffers__list .col-lg-4:last-child .ddOffers__item-content {
+        border: none;
+    }
+
+    .ddOffers__item {
+        padding-bottom: 25px;
+    border-bottom: 2px solid #d05450;
+    }
+
+    .show_singleOffer {
+        margin-top: 20px;
+    }
+
+    .ddOffers__list .col-lg-4 {
+        margin-bottom: 40px;
     }
 
 }
@@ -409,281 +602,48 @@ span.dd_item__count {
         font-size: 18px;
     }
 
-}
-
-// offer single
-
-.singleOffer__aside {
-    color: #fff;
-    background: #de4945;
-    height: 100%;
-    padding: 15px;
-    &_banner {
-        // background: #fff;
-        // border: 3px solid #222627;
-        font-weight: 300;
-        font-size: 40px;
-        padding: 15px 0px;
-        // text-align: center;
-        line-height: 1;
-        margin: 25px auto;
-        color: #222629;
-        line-height: 1;
-        position: relative;
-        margin: 25px auto;
-        text-align: left;
-        color: #ffffff;
-        &:before {
-            content: "";
-            position: absolute;
-            width: 85px;
-            height: 1px;
-            background-color: #fff;
-            bottom: 0;
-            left: 0px;
-        }
-    }
-    .backToOffers {
-        display: inline-block;
-        width: 100%;
-        color: #fff;
-        text-decoration: none;
-        position: relative;
-        padding: 10px;
-        padding-left: 35px;
-        font-size: 20px;
-        line-height: 1;
-        &:hover {
-            text-decoration: underline;
-        }
-        &:before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            width: 6px;
-            margin-top: -3px;
-            margin-left: -5px;
-            height: 6px;
-            -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-            border-bottom: 2px solid #fff;
-            border-right: 2px solid #fff;
-        }
-        &:after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 6px;
-            width: 0;
-            height: 2px;
-            background-color: #fff;
-            width: 15px;
-        }
+    .dd_offers_banner h1, .offers_area-title {
+        font-size: 28px;
+        line-height: 38px;
+        margin-right: auto;
+        margin-bottom: 16px;
     }
 
-    &-btn {
-        width: 227px;
-        height: 60px;
-        border-radius: 3px;
-        background-color: #34363a;
-        border: none;
-        color: #fff;
-        // font-family: Lato, sans-serif;
+    .dd_offers_banner {
+        padding: 114px 0 95px;
+        height: auto;
+        text-align: center;
+        background-position-y: 92% !important;
+        background-repeat: no-repeat !important;
+        background-size: initial !important;
+    }
+
+    .dd_offers_banner h1 .text_shadow {
+        font-size: 28px;
+        line-height: 38px;
+        top: -4px;
+        left: -9px;
+    }
+
+
+    .dd_offers_banner p {
+        line-height: 28px;
         font-size: 18px;
-        font-weight: 700;
-        line-height: 19px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        cursor: pointer;
-        text-decoration: none !important;
-        text-align: center;
-        margin: auto;
+        margin-bottom: 33px;
     }
 
-}
-
-.singleOffer__content {
-    background: #34363a;
-    border: 2px solid #de4945;
-    padding: 20px;
-
-    .singleOffer__title {
-        font-size: 30px;
-        font-weight: 400;    
-        margin-bottom: 26px;
-    }
-
-    &-editor {
-        color: #fff;
-        line-height: 1.6;
-        img {
-            max-width: 200px;
-            padding-left: 20px;
-            float: right;
-        }
-        p {
-            font-weight: 300;
-        }
-    }
-
-    .startCampagin {
-
-        border-radius: 3px;
-        background-color: #de4945;
-        border: none;
-        color: #fff;
+    .dd_offers_banner p.banner__subtitle {
+        line-height: 28px;
         font-size: 18px;
-        font-weight: 700;
-        line-height: 19px;
-        // text-transform: uppercase;  
-        display: inline-block;
-        cursor: pointer;
-        text-decoration: none !important;
-        text-align: center;
-        margin: auto;
-        margin-top: 40px;
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: .05px;
-        padding: 20px;
-        position: relative;
-        -webkit-transition: .16s ease-out;
-        transition: .16s ease-out;
-         &:before {
-            right: 10px;
-            width: 6px;
-            margin-top: -3px;
-            margin-left: -5px;
-            height: 6px;
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            content: "";
-            position: absolute;
-            -webkit-transition: .16s ease-out;
-            transition: .16s ease-out;
-            top: 50%;
-        }
-        &:after {
-            right: 11px;
-            width: 0;
-            height: 2px;
-            background-color: #fff;
-            -webkit-transition: .16s ease-out;
-            transition: .16s ease-out;
-            content: "";
-            position: absolute;
-            top: 50%;
-        }
-        &:hover {
-            -webkit-transition: .16s ease-out;
-            transition: .16s ease-out;
-            padding-right: 35px;
-            &:before {
-                border-bottom: 2px solid #fff;
-                border-right: 2px solid #fff;
-            }
-            &:after {
-                width: 15px;
-            }
-        }
+        margin-bottom: 34px;
     }
 
-    .startCampagin__wrapper {
-        text-align: center;
-    }
-
-    .disclaymer-text {
-        margin-top: 50px;
-        text-align: center;
-        color: #fff;
-        font-weight: 300;
-        line-height: 1.5;
-        span {
-            opacity: .8;
+    * {
+        br {
+            display: none;
         }
     }
 
 }
 
-.singleOffer__advan-title {
-    font-size: 26px;
-    line-height: 30px;
-    font-weight: 100;
-}
 
-
-.singleOffer__advan {
-
-    ul {
-        padding-left: 0;
-    }
-    li {
-        opacity: .8;
-        font-size: 18px;
-        font-weight: 400;
-        list-style: none;
-        line-height: 1.4;
-        padding: 0 0 20px 30px;
-        display: flex;
-        align-items: flex-start;
-        img {
-            width: 20px;
-            display: block;
-            margin-left: -30px;
-            margin-right: 15px;
-            margin-top: 5px;
-        }
-    }
-}
-
-// media
-
-@media (max-width: 991px) {
-
-    .singleOffer__aside_banner {
-        font-size: 34px;
-    }
-
-
-}
-
-@media (max-width: 767px) {
-
-    .singleOffer__aside {
-        margin-top: 40px;
-    }
-
-    .singleOffer {
-        .row {
-            flex-direction: column-reverse;
-        }
-    }
-
-
-}
-
-@media (max-width: 550px) {
-
-    .singleOffer__content-editor img {
-        padding-left: 0;
-        float: none;
-    }
-
-    .singleOffer__content {
-        background: transparent;
-        padding: 10px;
-        border: none;
-    }
-
-
-}
