@@ -758,6 +758,33 @@ span.dd_item__count {
   }
 }
 
+@media (max-height: 820px) {
+  .dd_offers_banner {
+    padding: 340px 0 142px;
+    height: 770px;
+  }
+}
+
+@media (max-height: 730px) {
+  .dd_offers_banner {
+    padding: 299px 0 126px;
+    height: 700px;
+  }
+}
+
+@media (max-height: 680px) {
+  .dd_offers_banner {
+    padding: 223px 0 126px;
+    height: 729px;
+    background-size: 106% !important;
+    background-position: 82% 180% !important;
+  }
+
+  .dd_offers_banner p {
+    margin-bottom: 20px;
+  }
+}
+
 .blogOffers .col-lg-4 {
   position: relative;
   width: 100%;
