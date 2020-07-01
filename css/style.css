@@ -308,7 +308,7 @@
   font-size: 23px;
   font-weight: 300;
   line-height: 51.04px;
-  text-decoration: underline;
+  text-decoration: none;
   letter-spacing: 1.2px;
   margin-bottom: 48px;
 }
@@ -393,7 +393,7 @@ h3.offer_title:after {
   -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  border: 1px solid #ffffff;
+  border: none;
   background-color: #d05450;
 }
 
