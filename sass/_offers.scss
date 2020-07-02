@@ -230,14 +230,14 @@
 }
 
 h3.offer_title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     position: relative;
     text-align: center;
     margin-top: 12px;
     &:after {
         margin: auto;
-        margin-top: 3px;
+        margin-top: 5px;
         content: "";
         display: block;
         width: 127px;
@@ -274,7 +274,6 @@ h3.offer_title {
     font-weight: 400;
     position: relative;
     letter-spacing: .05px;
-    box-shadow: 19px 5px 29px -3px rgba(0, 0, 0, 0.1);
     text-align: center;
     background: #ef3e42;
     color: #fff;
@@ -282,7 +281,6 @@ h3.offer_title {
     font-weight: 700;
     -webkit-transition: .16s ease-out;
     transition: .16s ease-out;
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     border: none;
     background-color: #d05450;
@@ -436,6 +434,17 @@ span.dd_item__count {
 
 // media
 
+@media (max-width: 1366px) {
+
+
+    .dd_offers_banner {
+        padding: 280px 0 25px;
+        height: auto;
+    }
+
+
+}
+
 @media (max-width: 991px) {
 
     // .dd_offers_banner h1,
@@ -459,10 +468,11 @@ span.dd_item__count {
     }
 
     .dd_offers_banner {
-        padding: 150px 0 80px;
+        padding: 190px 0 20px;
         height: auto;
-        background-position: 70% 69% !important;
-        background-size: initial !important;
+        background-position: left top !important;
+        background-size: cover !important;
+        background-image: url(../img/tablet-bg.png) !important;
     }
 
     .dd_offers_banner h1 {
@@ -610,12 +620,17 @@ span.dd_item__count {
     }
 
     .dd_offers_banner {
-        padding: 114px 0 95px;
+        // padding: 114px 0 95px;
+        padding: 135px 0 11px;
         height: auto;
         text-align: center;
-        background-position-y: 92% !important;
+        // background-position-y: 92% !important;
+        // background-repeat: no-repeat !important;
+        // background-size: initial !important;
+        background-position-y: 0 !important;
         background-repeat: no-repeat !important;
-        background-size: initial !important;
+        background-size: cover !important;
+        background-image: url("../img/mobile-bg.png") !important;
     }
 
     .dd_offers_banner h1 .text_shadow {
@@ -650,7 +665,7 @@ span.dd_item__count {
 // responsive height
 
 
-@media (max-height: 820px) {
+@media (max-height: 820px)  and (min-width: 992px) {
 
 
     .dd_offers_banner {
@@ -661,7 +676,7 @@ span.dd_item__count {
 }
 
 
-@media (max-height: 730px) {
+@media (max-height: 730px)  and (min-width: 992px)  {
 
     .dd_offers_banner {
         padding: 299px 0 126px;
@@ -670,7 +685,7 @@ span.dd_item__count {
 
 }
 
-@media (max-height: 680px) {
+@media (max-height: 680px) and (min-width: 992px) {
 
     .dd_offers_banner {
         padding: 223px 0 126px;
