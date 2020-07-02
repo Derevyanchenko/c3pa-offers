@@ -303,7 +303,8 @@
 }
 
 .category_row-sort {
-  text-shadow: 5px 0 4px #000000;
+ 
+
   color: #ffffff;
   font-size: 23px;
   font-weight: 300;
@@ -337,7 +338,7 @@
 }
 
 h3.offer_title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
   position: relative;
   text-align: center;
