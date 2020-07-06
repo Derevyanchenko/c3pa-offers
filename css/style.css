@@ -303,8 +303,6 @@
 }
 
 .category_row-sort {
- 
-
   color: #ffffff;
   font-size: 23px;
   font-weight: 300;
@@ -342,7 +340,7 @@ h3.offer_title {
   font-weight: 300;
   position: relative;
   text-align: center;
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 h3.offer_title:after {
@@ -780,10 +778,11 @@ span.dd_item__count {
 
 @media (max-height: 680px) and (min-width: 992px) {
   .dd_offers_banner {
-    padding: 223px 0 126px;
-    height: 729px;
-    background-size: 106% !important;
-    background-position: 82% 180% !important;
+    padding: 190px 0 20px;
+    height: auto;
+    background-position: left top !important;
+    background-size: cover !important;
+    background-image: url("../img/tablet-bg.png") !important;
   }
 
   .dd_offers_banner p {
